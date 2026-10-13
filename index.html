@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MedTech Makers Fair</title>
-<meta name="description" content="An invite-only coalition of MedTech vendors and suppliers building toward a hackathon and launch at TechniShow 2028.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta property="og:image" content="https://medtechmakers.nl/assets/logo.png">
+<meta name="description" content="An invite-only coalition of MedTech vendors and suppliers solving real patient-pathway problems together, building toward a hackathon and launch at TechniShow 2028.">
 <style>
   :root {
     --bg: #fbfbf9; --fg: #1c2321; --muted: #5b6662; --accent: #0f6b5c;
@@ -19,7 +21,8 @@
          font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 42rem; margin: 0 auto; padding: 4rem 16px 3rem; }
   h1 { font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.15; margin: 0 0 .5rem; }
-  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .5rem; }
+  h3 { font-size: 1rem; margin: 0 0 .15rem; }
   .lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2rem; }
   .card { background: var(--card); border: 1px solid var(--rule);
           border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; }
@@ -28,27 +31,66 @@
          background: var(--accent); color: var(--bg); border-radius: 8px;
          text-decoration: none; font-weight: 600; }
   ul { padding-left: 1.2rem; }
+  li + li { margin-top: .35rem; }
   hr { border: 0; border-top: 1px solid var(--rule); margin: 3.5rem 0 0; }
   footer { color: var(--muted); font-size: .9rem; margin-top: 2rem; }
   .lang { float: right; font-size: .9rem; }
+  .logo { display: block; width: 11rem; max-width: 60%; height: auto; margin: 0 0 1.5rem; }
+  @media (prefers-color-scheme: dark) {
+    .logo { background: #fbfbf9; border-radius: 14px; padding: .5rem; }
+  }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+          margin-top: 1rem; }
+  .grid > div { background: var(--card); border: 1px solid var(--rule);
+                border-radius: 10px; padding: 1rem 1.25rem; }
+  .grid p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .timeline { list-style: none; padding: 0; margin: 1rem 0 0;
+              border-left: 2px solid var(--rule); }
+  .timeline li { position: relative; padding: 0 0 1.25rem 1.25rem; margin: 0; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55rem;
+                         width: 12px; height: 12px; border-radius: 50%;
+                         background: var(--accent); }
+  .timeline .when { display: block; font-size: .85rem; font-weight: 600;
+                    color: var(--accent); letter-spacing: .02em; }
+  .timeline p { margin: 0; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
   <section id="en" lang="en">
     <div class="lang"><a href="#nl">Nederlands</a></div>
+    <img class="logo" src="assets/logo.png" alt="MedTech Makers Fair logo: a medical cross combined with a gear and a puzzle piece" width="594" height="595">
     <h1>MedTech Makers Fair</h1>
-    <p class="lede">An invite-only coalition of MedTech vendors and their suppliers, building together toward a hackathon and launch at TechniShow 2028.</p>
+    <p class="lede">An invite-only coalition of MedTech vendors and their suppliers, solving real patient-pathway problems together, building toward a hackathon and launch at TechniShow 2028.</p>
 
-    <h2>What we are doing</h2>
-    <p>Over the 18 months before the event, member organisations collaborate on a small number of selected patient pathways. The aim is that vendors and suppliers solve real pathway problems together, and that the coalition keeps growing after March 2028.</p>
+    <h2>Why this exists</h2>
+    <p>The hard problems in a patient pathway rarely sit inside one product. They sit between systems, devices and suppliers, where no single vendor owns the whole picture. We bring the people who build those pieces into one room, around the same pathway, long before an event forces a deadline.</p>
 
-    <h2>How it works</h2>
+    <h2>Who it is for</h2>
+    <p>MedTech vendors and the suppliers around them: software, devices, components, data and integration partners that want to build things that work together in practice.</p>
+
+    <h2>What members do</h2>
+    <div class="grid">
+      <div><h3>Work on pathways</h3><p>Small working groups per selected patient pathway, each with a clear problem to solve.</p></div>
+      <div><h3>Share capabilities</h3><p>A member directory of what each organisation offers and needs, so the right partners find each other.</p></div>
+      <div><h3>Meet on a rhythm</h3><p>A fixed monthly call and quarterly in-person sessions, so progress is visible and steady.</p></div>
+      <div><h3>Build together</h3><p>Shared specifications and starter repositories, working toward a hackathon on synthetic data.</p></div>
+    </div>
+
+    <h2>The road to 2028</h2>
+    <ol class="timeline">
+      <li><span class="when">Oct to Dec 2026</span><h3>Foundations</h3><p>Charter, the first channel for members, a founding group of invited organisations, and the choice of the first pathways.</p></li>
+      <li><span class="when">2027</span><h3>Pathway working groups</h3><p>Working groups get going, the capability directory takes shape, and the monthly and quarterly rhythm is established.</p></li>
+      <li><span class="when">Late 2027 to early 2028</span><h3>Hackathon preparation</h3><p>Synthetic datasets, starter repositories and launch planning.</p></li>
+      <li><span class="when">March 2028</span><h3>Hackathon and launch at TechniShow</h3><p>Members build and show what they made together. After that, the coalition decides on openness, governance and continuation.</p></li>
+    </ol>
+
+    <h2>Ground rules</h2>
     <ul>
-      <li>Working groups per patient pathway</li>
-      <li>A monthly call and quarterly in-person sessions</li>
-      <li>A hackathon and launch event in March 2028</li>
-      <li>Synthetic data only. No patient-identifiable data is ever shared.</li>
+      <li><strong>By invitation.</strong> Members share needs and capabilities, and some of that is commercially sensitive. A closed group builds trust.</li>
+      <li><strong>No patient data.</strong> Synthetic or de-identified data only. Nothing patient-identifiable is ever shared.</li>
+      <li><strong>Open specs.</strong> What members produce together is shared under an open licence.</li>
+      <li><strong>Independent.</strong> The coalition is neutral and is meant to outlive any single company.</li>
     </ul>
 
     <div class="card">
@@ -62,18 +104,38 @@
 
   <section id="nl" lang="nl">
     <div class="lang"><a href="#en">English</a></div>
+    <img class="logo" src="assets/logo.png" alt="MedTech Makers Fair logo: een medisch kruis gecombineerd met een tandwiel en een puzzelstuk" width="594" height="595">
     <h1>MedTech Makers Fair</h1>
-    <p class="lede">Een coalitie op uitnodiging van MedTech-leveranciers en hun toeleveranciers, die samen toewerkt naar een hackathon en lancering op TechniShow 2028.</p>
+    <p class="lede">Een coalitie op uitnodiging van MedTech-leveranciers en hun toeleveranciers, die samen echte problemen in patiëntpaden oplost en toewerkt naar een hackathon en lancering op TechniShow 2028.</p>
 
-    <h2>Wat we doen</h2>
-    <p>In de 18 maanden voor het evenement werken deelnemende organisaties samen aan een klein aantal geselecteerde patiëntpaden. Het doel is dat leveranciers en toeleveranciers samen echte problemen in het zorgpad oplossen, en dat de coalitie ook na maart 2028 blijft groeien.</p>
+    <h2>Waarom dit bestaat</h2>
+    <p>De lastige problemen in een patiëntpad zitten zelden binnen één product. Ze zitten tussen systemen, apparaten en leveranciers, waar geen enkele partij het hele plaatje overziet. Wij brengen de mensen die die onderdelen bouwen bij elkaar rond hetzelfde patiëntpad, ruim voordat een evenement een deadline afdwingt.</p>
 
-    <h2>Hoe het werkt</h2>
+    <h2>Voor wie</h2>
+    <p>MedTech-leveranciers en de toeleveranciers eromheen: software, apparatuur, componenten, data en integratiepartners die dingen willen bouwen die in de praktijk samenwerken.</p>
+
+    <h2>Wat deelnemers doen</h2>
+    <div class="grid">
+      <div><h3>Werken aan patiëntpaden</h3><p>Kleine werkgroepen per gekozen patiëntpad, elk met een helder probleem om op te lossen.</p></div>
+      <div><h3>Mogelijkheden delen</h3><p>Een ledenoverzicht van wat elke organisatie biedt en zoekt, zodat de juiste partners elkaar vinden.</p></div>
+      <div><h3>Op een vast ritme ontmoeten</h3><p>Een vast maandelijks overleg en driemaandelijkse bijeenkomsten, zodat voortgang zichtbaar en gestaag is.</p></div>
+      <div><h3>Samen bouwen</h3><p>Gedeelde specificaties en startrepositories, op weg naar een hackathon met synthetische data.</p></div>
+    </div>
+
+    <h2>De weg naar 2028</h2>
+    <ol class="timeline">
+      <li><span class="when">Okt t/m dec 2026</span><h3>Fundament</h3><p>Handvest, het eerste kanaal voor deelnemers, een oprichtingsgroep van uitgenodigde organisaties en de keuze van de eerste patiëntpaden.</p></li>
+      <li><span class="when">2027</span><h3>Werkgroepen per patiëntpad</h3><p>De werkgroepen komen op gang, het overzicht van mogelijkheden krijgt vorm en het maandelijkse en driemaandelijkse ritme staat.</p></li>
+      <li><span class="when">Eind 2027 tot begin 2028</span><h3>Voorbereiding hackathon</h3><p>Synthetische datasets, startrepositories en planning van de lancering.</p></li>
+      <li><span class="when">Maart 2028</span><h3>Hackathon en lancering op TechniShow</h3><p>Deelnemers bouwen en laten zien wat ze samen hebben gemaakt. Daarna besluit de coalitie over openheid, bestuur en voortzetting.</p></li>
+    </ol>
+
+    <h2>Spelregels</h2>
     <ul>
-      <li>Werkgroepen per patiëntpad</li>
-      <li>Een maandelijks overleg en driemaandelijkse bijeenkomsten</li>
-      <li>Een hackathon en lanceringsevenement in maart 2028</li>
-      <li>Alleen synthetische data. Er worden nooit herleidbare patiëntgegevens gedeeld.</li>
+      <li><strong>Op uitnodiging.</strong> Deelnemers delen behoeften en mogelijkheden, en een deel daarvan is commercieel gevoelig. Een besloten groep schept vertrouwen.</li>
+      <li><strong>Geen patiëntgegevens.</strong> Alleen synthetische of gede-identificeerde data. Er worden nooit herleidbare patiëntgegevens gedeeld.</li>
+      <li><strong>Open specificaties.</strong> Wat deelnemers samen maken, wordt gedeeld onder een open licentie.</li>
+      <li><strong>Onafhankelijk.</strong> De coalitie is neutraal en bedoeld om langer te bestaan dan één enkel bedrijf.</li>
     </ul>
 
     <div class="card">
